@@ -1,3 +1,9 @@
+# Go
+go.sum
+
+# Project
+cmd/dev/
+
 # IDE/Text editor
 .idea/
 .vscode/
