@@ -18,9 +18,9 @@ func NewService(database *gorm.DB) *Service {
 	}
 }
 
-func (service *Service) Get(id uint) (Artist, error) {
+func (service *Service) Get(artistID uint) (Artist, error) {
 	artist, err := gorm.G[Artist](service.database).
-		Where("id = ?", id).
+		Where("id = ?", artistID).
 		First(context.Background())
 
 	return artist, err
