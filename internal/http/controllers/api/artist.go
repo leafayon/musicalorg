@@ -14,7 +14,9 @@ type ArtistController struct {
 }
 
 func NewArtistController(service *artist.Service) *ArtistController {
-	return &ArtistController{service: service}
+	return &ArtistController{
+		service: service,
+	}
 }
 
 func (controller *ArtistController) GetAllArtists(responseWriter http.ResponseWriter, request *http.Request) {
